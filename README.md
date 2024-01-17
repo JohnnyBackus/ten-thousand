@@ -1,20 +1,34 @@
-LAB - Class xx
-Project: Project Name Here
-Author: Student/Group Name
-Links and Resources
-back-end server url (when applicable)
-front-end application (when applicable)
-Setup
-.env requirements (where applicable)
-i.e.
+# LAB - Class 05
 
-PORT - Port Number
-DATABASE_URL - URL to the running Postgres instance/db
-How to initialize/run your application (where applicable)
-e.g. python main.py
-How to use your library (where applicable)
-Tests
-How do you run tests?
-Any tests of note?
-Describe any tests that you did not complete, skipped, etc
-© Code Fellows 2024
+## Project: Ten Thousand
+
+### Author:Johnny Backus
+
+### Links and Resources
+
+- [CodeFellows Python Lab Instructions](https://codefellows.github.io/code-401-python-guide/reference/submission-instructions/labs/)
+- [CodeFellows README template](https://codefellows.github.io/code-401-python-guide/reference/submission-instructions/labs/README-template.html)
+- [ChatGPT chat](https://chat.openai.com/share/d3fdceeb-9e1d-4633-9ece-04e72d6ef6e9)
+- Collaborated with assigned lab partner Kyle for approach.
+- Assistance received from TA Tammy
+
+### Setup
+
+*.env requirements*
+- n/a
+
+### How to initialize/run your application (where applicable)
+
+*Not yet a functional app, however tests can be run*
+- pip install pytest
+- python3 game_logic.py
+
+### How to use your library (where applicable)
+
+- not applicable
+
+### Tests
+
+- Tests are located in the tests directory --> test_game_logic.py
+- Run tests using pytest.
+- 62 of 62 tests passed.
