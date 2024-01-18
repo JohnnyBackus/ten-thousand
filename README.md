@@ -1,6 +1,6 @@
 # LAB - Class 07
 
-## Project: Ten Thousand v2
+## Project: Ten Thousand v3
 
 ### Author:Johnny Backus
 
@@ -29,6 +29,6 @@
 
 ### Tests
 
-- Tests are located in the tests directory --> tests/version_1 and tests/version_2
+- Tests are located in the tests directory --> tests/version_1 , version_2 , version_3
 - Still passing all version_1 tests
 - ran game.py and received same output as in version_2 tests: quitter.sim, one_and_done.sim, bank_one_roll_then_quit.sim, bank_first_for_two_rounds.sim.
