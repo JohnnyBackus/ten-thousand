@@ -23,26 +23,29 @@ def start_menu():
         print("OK. Maybe another time")
         return
     elif response == "y":
-        game_loop()
+        start_round_message()
 
+
+def start_round_message():
+    print("Starting round ", round, "")
+    game_loop()
 
 def game_loop():
-        global dice_remaining
-        global round
-        global total_score
-        print("Starting round ", round, "")
-        GameLogic.roll_dice(dice_remaining)
-        print("Enter dice to keep, or (q)uit: ")
-        response = input(">")
-        if response == "q":
-            print("Thanks for playing. You earned", total_score, "points")
-            return
-        else:
-            kept_dice = list(response)
-            kept_dice = [int(i) for i in kept_dice]
-            dice_remaining -= len(kept_dice)
-            # print("kept_dice: ", kept_dice)
-            roll_or_bank(kept_dice)
+    global dice_remaining
+    global round
+    global total_score
+    GameLogic.roll_dice(dice_remaining)
+    print("Enter dice to keep, or (q)uit: ")
+    response = input(">")
+    if response == "q":
+        print("Thanks for playing. You earned", total_score, "points")
+        return
+    else:
+        kept_dice = list(response)
+        kept_dice = [int(i) for i in kept_dice]
+        dice_remaining -= len(kept_dice)
+        # print("kept_dice: ", kept_dice)
+        roll_or_bank(kept_dice)
 
 
 def roll_or_bank(dice):
@@ -51,7 +54,7 @@ def roll_or_bank(dice):
     global round
     round_score = GameLogic.calculate_score(dice)
     total_score += round_score
-    print("You have ", round_score, " unbanked points and ", dice_remaining, " dice remaining")
+    print("You have ", round_score, " unbanked points this round and ", dice_remaining, " dice remaining")
     print("(r)oll again, (b)ank your points or (q)uit: ")
     response = input(">")
     if response == "q":
@@ -59,9 +62,10 @@ def roll_or_bank(dice):
         return
     elif response == "b":
         print("You banked ", round_score, " in round ", round, "")
-        round += 1
         print("Total score is ", total_score, "points")
-        game_loop()
+        round += 1
+        dice_remaining = 6
+        start_round_message()
     elif response == "r":
         game_loop()
     
