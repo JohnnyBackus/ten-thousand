@@ -99,7 +99,7 @@ class GameLogic:
         return score
 
     @staticmethod
-    def roll_dice(num_dice):
+    def roll_dice(num_dice = 6):
         """
         Simulate rolling a specified number of dice.
 
@@ -110,17 +110,22 @@ class GameLogic:
         - tuple of random integers representing the values of rolled dice.
         """
         dice_values = []
+        print("Rolling", num_dice, "dice...")
         for _ in range(num_dice):
             dice_values.append(random.randint(1, 6))  # Example: Rolling a six-sided die
-
+        print("***", dice_values, "***")
         return tuple(dice_values)
+    
+    # @staticmethod
+    # def bank_or_roll():
 
 
 # Example usage:
 # print("roll_dice: ", GameLogic.roll_dice(6))
 # print("calculate_score: ", GameLogic.calculate_score((1,2,3,3,4,6)))
 
-# placeholder: not needed yet as no script is calling this class
+
+
 # def main():
-# if __name__ == "__main__":
+#     if __name__ == "__main__":
 #     main()
