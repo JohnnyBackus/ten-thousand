@@ -7,7 +7,6 @@ total_score = 0
 dice_remaining = 6
 
 # welcome message
-# def play(roller=None, num_rounds=10):
 def play():    
     print("Welcome to Ten Thousand")
     start_menu()
@@ -30,6 +29,9 @@ def start_round_message():
     print("Starting round ", round, "")
     game_loop()
 
+
+# game loop to handle each dice roll
+# def game_loop(roller=None, num_rounds=10):
 def game_loop():
     global dice_remaining
     global round
@@ -48,6 +50,7 @@ def game_loop():
         roll_or_bank(kept_dice)
 
 
+# roll or bank to handle scores and user choice
 def roll_or_bank(dice):
     global total_score
     global dice_remaining
@@ -63,13 +66,13 @@ def roll_or_bank(dice):
     elif response == "b":
         print("You banked ", round_score, " in round ", round, "")
         print("Total score is ", total_score, "points")
-        round += 1
-        dice_remaining = 6
+        round += 1 # increment round
+        dice_remaining = 6 #reset dice remaining for next round
         start_round_message()
     elif response == "r":
         game_loop()
-    
-      
+
+
 
 if __name__ == "__main__":
 
@@ -81,4 +84,4 @@ if __name__ == "__main__":
     # def mock_roller(num_dice):
     #     return [rolls.pop(0)]
     
-    # play(roller=mock_roller)
+    # game_loop(roller=mock_roller)
