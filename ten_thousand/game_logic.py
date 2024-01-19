@@ -62,7 +62,7 @@ class GameLogic:
      
         # Count occurrences of each dice value
         # Cumulate score based on score table
-        print("dice_values: ", dice_values)
+        # print("dice_values: ", dice_values)
         
         # test for straight
         sorted_dice_values = sorted(dice_values)
