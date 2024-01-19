@@ -1,4 +1,4 @@
-from game_logic import GameLogic
+from ten_thousand.game_logic import GameLogic
 
 # game variables
 roll_dice = GameLogic.roll_dice
@@ -10,7 +10,10 @@ game_score = 0
 dice_remaining = 6
 
 
-def play(): # welcome message and starts game
+def play(roller=None): # welcome message and starts game
+    global roll_dice
+    if roller is not None:
+        roll_dice = roller
     print("Welcome to Ten Thousand!")
     start_menu()
 
